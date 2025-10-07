@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Gourmet Palette Catering</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Gourmet<span>Palette</span></a>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-project">
+        <div class="hero-content">
+            <h1>Our Portfolio</h1>
+            <p>Explore our successful events and memorable catering experiences</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects">
+        <div class="container">
+            <h2>Featured Events</h2>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All Events</button>
+                <button class="filter-btn" data-filter="wedding">Weddings</button>
+                <button class="filter-btn" data-filter="corporate">Corporate</button>
+                <button class="filter-btn" data-filter="private">Private Parties</button>
+                <button class="filter-btn" data-filter="charity">Charity Events</button>
+            </div>
+            <div class="projects-grid">
+                <!-- Wedding Project 1 -->
+                <div class="project-item" data-category="wedding">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Elegant Wedding">
+                        <div class="project-overlay">
+                            <a href="#" class="view-project" data-id="1"><i class="fas fa-search"></i></a>
+                            <a href="#"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Wedding</span>
+                        <h3 class="project-title">Sarah & Michael's Elegant Wedding</h3>
+                        <p class="project-desc">A beautiful summer wedding with 200 guests, featuring a custom menu and exquisite presentation.</p>
+                        <div class="project-meta">
+                            <span><i class="far fa-calendar"></i> June 12, 2023</span>
+                            <span><i class="fas fa-users"></i> 200 Guests</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Corporate Project 1 -->
+                <div class="project-item" data-category="corporate">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Corporate Event">
+                        <div class="project-overlay">
+                            <a href="#" class="view-project" data-id="2"><i class="fas fa-search"></i></a>
+                            <a href="#"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Corporate</span>
+                        <h3 class="project-title">TechGlobal Annual Conference</h3>
+                        <p class="project-desc">Three-day conference catering for 300 attendees with diverse dietary requirements.</p>
+                        <div class="project-meta">
+                            <span><i class="far fa-calendar"></i> October 5-7, 2023</span>
+                            <span><i class="fas fa-users"></i> 300 Guests</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Private Party Project 1 -->
+                <div class="project-item" data-category="private">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Birthday Party">
+                        <div class="project-overlay">
+                            <a href="#" class="view-project" data-id="3"><i class="fas fa-search"></i></a>
+                            <a href="#"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Private Party</span>
+                        <h3 class="project-title">Sophia's 50th Birthday Celebration</h3>
+                        <p class="project-desc">An intimate garden party with custom cocktails and gourmet hors d'oeuvres.</p>
+                        <div class="project-meta">
+                            <span><i class="far fa-calendar"></i> August 20, 2023</span>
+                            <span><i class="fas fa-users"></i> 80 Guests</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charity Project 1 -->
+                <div class="project-item" data-category="charity">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1544396821-4dd40b938ad3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Charity Gala">
+                        <div class="project-overlay">
+                            <a href="#" class="view-project" data-id="4"><i class="fas fa-search"></i></a>
+                            <a href="#"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Charity Event</span>
+                        <h3 class="project-title">Hope Foundation Annual Gala</h3>
+                        <p class="project-desc">A black-tie fundraiser with plated dinner service for 250 distinguished guests.</p>
+                        <div class="project-meta">
+                            <span><i class="far fa-calendar"></i> November 18, 2023</span>
+                            <span><i class="fas fa-users"></i> 250 Guests</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wedding Project 2 -->
+                <div class="project-item" data-category="wedding">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Beach Wedding">
+                        <div class="project-overlay">
+                            <a href="#" class="view-project" data-id="5"><i class="fas fa-search"></i></a>
+                            <a href="#"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Wedding</span>
+                        <h3 class="project-title">Jessica & Robert's Beach Wedding</h3>
+                        <p class="project-desc">A romantic seaside ceremony followed by a seafood-focused reception.</p>
+                        <div class="project-meta">
+                            <span><i class="far fa-calendar"></i> July 8, 2023</span>
+                            <span><i class="fas fa-users"></i> 120 Guests</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Corporate Project 2 -->
+                <div class="project-item" data-category="corporate">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Product Launch">
+                        <div class="project-overlay">
+                            <a href="#" class="view-project" data-id="6"><i class="fas fa-search"></i></a>
+                            <a href="#"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Corporate</span>
+                        <h3 class="project-title">NexTech Product Launch</h3>
+                        <p class="project-desc">Innovative food stations and interactive culinary experiences for a tech launch.</p>
+                        <div class="project-meta">
+                            <span><i class="far fa-calendar"></i> September 15, 2023</span>
+                            <span><i class="fas fa-users"></i> 180 Guests</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Client Testimonials</h2>
+            <div class="testimonial-slide active">
+                <p class="testimonial-content">Gourmet Palette exceeded all our expectations for our wedding. The food was exceptional, and the service was impeccable. Our guests are still talking about it months later!</p>
+                <p class="testimonial-author">- Sarah & Michael Johnson</p>
+            </div>
+            <div class="testimonial-slide">
+                <p class="testimonial-content">We've used Gourmet Palette for our last three corporate events, and they consistently deliver exceptional quality and service. Their attention to detail is remarkable.</p>
+                <p class="testimonial-author">- Robert Chen, Marketing Director</p>
+            </div>
+            <div class="testimonial-slide">
+                <p class="testimonial-content">The team at Gourmet Palette made my daughter's graduation party so special. The food was delicious, and they handled everything professionally. Highly recommend!</p>
+                <p class="testimonial-author">- Linda Martinez</p>
+            </div>
+            <div class="testimonial-nav">
+                <button class="testimonial-nav-btn" id="testimonialPrev"><i class="fas fa-chevron-left"></i></button>
+                <button class="testimonial-nav-btn" id="testimonialNext"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Clients Section -->
+        <section class="clients">
+            <div class="container">
+                <h2>Our Valued Clients</h2>
+                <div class="clients-grid">
+                    <div class="client-item">
+                        <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="TechGlobal">
+                    </div>
+                    <div class="client-item">
+                        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Hope Foundation">
+                    </div>
+                    <div class="client-item">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="NexTech">
+                    </div>
+                    <div class="client-item">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Silver Oaks">
+                    </div>
+                    <div class="client-item">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Urban Events">
+                    </div>
+                    <div class="client-item">
+                        <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Elite Weddings">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Create Your Next Event?</h2>
+            <p>Let us bring our expertise to your special occasion</p>
+            <a href="contact.html" class="btn">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Gourmet<span>Palette</span></div>
+                    <p>Creating exceptional culinary experiences for all your special events and occasions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Wedding Catering</a></li>
+                        <li><a href="#">Corporate Events</a></li>
+                        <li><a href="#">Private Parties</a></li>
+                        <li><a href="#">Menu Planning</a></li>
+                        <li><a href="#">Event Staffing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Culinary Avenue, Foodville</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@gourmetpalette.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Gourmet Palette Catering. Designed by <a href=""><span>Introverted Techie</span></a>All rights reserved.</p>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <div class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="" alt="" id="modalImage">
+                </div>
+                <h2 id="modalTitle"></h2>
+                <p id="modalDesc"></p>
+                <div class="modal-meta">
+                    <span id="modalDate"></span>
+                    <span id="modalGuests"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+             // Project Filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectItems = document.querySelectorAll('.project-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                // Get filter value
+                const filterValue = button.getAttribute('data-filter');
+                
+                // Show/hide project items based on filter
+                projectItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Testimonials Slideshow
+        const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+        const testimonialPrev = document.getElementById('testimonialPrev');
+        const testimonialNext = document.getElementById('testimonialNext');
+        let currentTestimonial = 0;
+
+        function showTestimonial(index) {
+            testimonialSlides.forEach(slide => slide.classList.remove('active'));
+            testimonialSlides[index].classList.add('active');
+            currentTestimonial = index;
+        }
+
+        testimonialPrev.addEventListener('click', () => {
+            let prevIndex = (currentTestimonial - 1 + testimonialSlides.length) % testimonialSlides.length;
+            showTestimonial(prevIndex);
+        });
+
+        testimonialNext.addEventListener('click', () => {
+            let nextIndex = (currentTestimonial + 1) % testimonialSlides.length;
+            showTestimonial(nextIndex);
+        });
+
+        // Project Modal Functionality
+        const projectModal = document.getElementById('projectModal');
+        const modalClose = document.getElementById('modalClose');
+        const viewProjectButtons = document.querySelectorAll('.view-project');
+        const modalImage = document.getElementById('modalImage');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDesc = document.getElementById('modalDesc');
+        const modalDate = document.getElementById('modalDate');
+        const modalGuests = document.getElementById('modalGuests');
+
+        // Project data for the modal
+        const projectData = {
+            1: {
+                image: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80',
+                title: 'Sarah & Michael\'s Elegant Wedding',
+                desc: 'A beautiful summer wedding with 200 guests, featuring a custom menu and exquisite presentation. The event was held at a picturesque countryside venue with a marquee reception. We created a bespoke menu that included canapés, a three-course plated dinner, and an elaborate dessert table. Our team of 15 staff ensured flawless service throughout the day.',
+                date: 'June 12, 2023',
+                guests: '200 Guests'
+            },
+            2: {
+                image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80',
+                title: 'TechGlobal Annual Conference',
+                desc: 'Three-day conference catering for 300 attendees with diverse dietary requirements. We provided breakfast, lunch, and refreshments throughout the event, with options for vegetarian, vegan, gluten-free, and other dietary needs. The setup included multiple food stations, a dedicated coffee bar, and evening networking receptions with canapés and cocktails.',
+                date: 'October 5-7, 2023',
+                guests: '300 Guests'
+            },
+            3: {
+                image: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80',
+                title: 'Sophia\'s 50th Birthday Celebration',
+                desc: 'An intimate garden party with custom cocktails and gourmet hors d\'oeuvres. The event featured a bespoke cocktail menu, elegant canapés, and a stunning dessert display. We transformed the client\'s garden into an enchanting party space with ambient lighting and stylish serving stations. The menu was designed to reflect the client\'s personal tastes and dietary preferences.',
+                date: 'August 20, 2023',
+                guests: '80 Guests'
+            },
+            4: {
+                image: 'https://images.unsplash.com/photo-1544396821-4dd40b938ad3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80',
+                title: 'Hope Foundation Annual Gala',
+                desc: 'A black-tie fundraiser with plated dinner service for 250 distinguished guests. The event raised over £50,000 for charitable causes. Our team created an elegant five-course menu with wine pairings, featuring premium ingredients and artistic presentation. We worked closely with event organizers to ensure seamless coordination between catering and program elements.',
+                date: 'November 18, 2023',
+                guests: '250 Guests'
+            },
+            5: {
+                image: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80',
+                title: 'Jessica & Robert\'s Beach Wedding',
+                desc: 'A romantic seaside ceremony followed by a seafood-focused reception. The menu highlighted fresh local seafood with Mediterranean influences. We created a beachside dining experience with rustic yet elegant presentation, featuring grilled fish, seafood paella, and coastal-inspired cocktails. Despite the outdoor setting, our team maintained professional service standards throughout.',
+                date: 'July 8, 2023',
+                guests: '120 Guests'
+            },
+            6: {
+                image: 'https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80',
+                title: 'NexTech Product Launch',
+                desc: 'Innovative food stations and interactive culinary experiences for a tech launch. We designed futuristic food concepts that mirrored the company\'s innovative products, including molecular gastronomy elements, edible projections, and interactive food stations. The menu was designed to be Instagram-worthy while maintaining exceptional taste and quality.',
+                date: 'September 15, 2023',
+                guests: '180 Guests'
+            }
+        };
+
+        viewProjectButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const projectId = button.getAttribute('data-id');
+                
+                // Get project details from our data object
+                const project = projectData[projectId];
+                
+                if (project) {
+                    // Populate modal
+                    modalImage.src = project.image;
+                    modalImage.alt = project.title;
+                    modalTitle.textContent = project.title;
+                    modalDesc.textContent = project.desc;
+                    modalDate.innerHTML = `<i class="far fa-calendar"></i> ${project.date}`;
+                    modalGuests.innerHTML = `<i class="fas fa-users"></i> ${project.guests}`;
+                    
+                    // Show modal
+                    projectModal.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        // Close modal when clicking the close button
+        modalClose.addEventListener('click', () => {
+            projectModal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close modal when clicking outside the content
+        window.addEventListener('click', (e) => {
+            if (e.target === projectModal) {
+                projectModal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && projectModal.classList.contains('show')) {
+                projectModal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Animation on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.project-item, .client-item');
+            
+            elements.forEach(element => {
+                const position = element.getBoundingClientRect();
+                
+                // If element is in viewport
+                if(position.top < window.innerHeight - 100) {
+                    element.style.animation = 'fadeInUp 1s ease forwards';
+                }
+            });
+        }
+
+        // Add keyframes for animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(50px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Initial call and on scroll
+        window.addEventListener('load', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
+</body>
+</html>

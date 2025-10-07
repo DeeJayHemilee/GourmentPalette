@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gourmet Palette - Complete Menu</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+       <style>
+                /* Base Styles */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            :root {
+                --primary: #d4af37;
+                --secondary: #8b4513;
+                --accent: #f8f0e3;
+                --dark: #333;
+                --light: #fff;
+                --gray: #f5f5f5;
+            }
+
+            body {
+                color: var(--dark);
+                line-height: 1.6;
+                background-color: var(--light);
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 2rem;
+            }
+
+            .menu-header {
+                text-align: center;
+                margin-bottom: 3rem;
+                padding: 2rem;
+                background: var(--accent);
+                border-radius: 10px;
+            }
+
+            .menu-header h1 {
+                font-size: 3rem;
+                color: var(--secondary);
+                margin-bottom: 1rem;
+            }
+
+            .menu-header p {
+                font-size: 1.2rem;
+                color: var(--dark);
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .menu-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
+                margin-bottom: 3rem;
+            }
+
+            .menu-category {
+                background: var(--light);
+                border-radius: 10px;
+                padding: 2rem;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            }
+
+            .category-header {
+                text-align: center;
+                margin-bottom: 2rem;
+                padding-bottom: 1rem;
+                border-bottom: 2px solid var(--primary);
+            }
+
+            .category-header h2 {
+                color: var(--secondary);
+                font-size: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .menu-item {
+                margin-bottom: 1.5rem;
+                padding-bottom: 1.5rem;
+                border-bottom: 1px dashed #ddd;
+            }
+
+            .menu-item:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            .item-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-bottom: 0.5rem;
+            }
+
+            .item-title {
+                font-weight: 600;
+                color: var(--secondary);
+                font-size: 1.2rem;
+            }
+
+            .item-price {
+                color: var(--primary);
+                font-weight: 700;
+                font-size: 1.2rem;
+                white-space: nowrap;
+                margin-left: 1rem;
+            }
+
+            .item-desc {
+                color: #666;
+                margin-bottom: 0.5rem;
+            }
+
+            .item-badge {
+                display: inline-block;
+                padding: 0.3rem 0.8rem;
+                background: var(--accent);
+                color: var(--secondary);
+                border-radius: 5px;
+                font-size: 0.8rem;
+                font-weight: 600;
+            }
+
+            .menu-footer {
+                text-align: center;
+                padding: 2rem;
+                background: var(--accent);
+                border-radius: 10px;
+                margin-top: 2rem;
+            }
+
+            .action-buttons {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                margin-top: 2rem;
+            }
+
+            .btn {
+                display: inline-block;
+                background: var(--primary);
+                color: var(--light);
+                padding: 0.8rem 2rem;
+                border: none;
+                border-radius: 5px;
+                text-decoration: none;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .btn:hover {
+                background: var(--secondary);
+                transform: translateY(-3px);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            }
+
+            .btn-outline {
+                background: transparent;
+                border: 2px solid var(--primary);
+                color: var(--primary);
+            }
+
+            .btn-outline:hover {
+                background: var(--primary);
+                color: var(--light);
+            }
+
+
+            @media print {
+                body {
+                    padding: 0;
+                }
+                
+                .action-buttons {
+                    display: none;
+                }
+                
+                .menu-header, .menu-category, .menu-footer {
+                    box-shadow: none;
+                    border: 1px solid #ddd;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .menu-container {
+                    grid-template-columns: 1fr;
+                }
+                
+                .action-buttons {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+
+            /* PDF Section */
+        .pdf-section {
+            background: var(--accent);
+            text-align: center;
+            padding: 30px 0;
+            border-radius: 10px;
+
+        }
+
+        .pdf-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .pdf-icon {
+            font-size: 4rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="menu-header">
+            <h1>Gourmet Palette Catering Menu</h1>
+            <p>Experience exceptional cuisine crafted with the finest ingredients and attention to detail. Our menu features a variety of options to suit all tastes and dietary requirements.</p>
+        </div>
+
+        <div class="menu-container">
+            <!-- Starters Section -->
+            <div class="menu-category">
+                <div class="category-header">
+                    <h2><i class="fas fa-utensils"></i> Starters</h2>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-title">Tomato Bruschetta</div>
+                        <div class="item-price">£8.95</div>
+                    </div>
+                    <div class="item-desc">Toasted bread topped with fresh tomatoes, basil, and extra virgin olive oil</div>
+                    <span class="item-badge">Vegetarian</span>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-title">Prawn Cocktail</div>
+                        <div class="item-price">£10.50</div>
+                    </div>
+                    <div class="item-desc">Succulent prawns served with crisp lettuce and homemade cocktail sauce</div>
+                    <span class="item-badge">Chef's Touch</span>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-title">Mushroom Arancini</div>
+                        <div class="item-price">£9.25</div>
+                    </div>
+                    <div class="item-desc">Crispy risotto balls stuffed with wild mushrooms and mozzarella</div>
+                    <span class="item-badge">Vegetarian</span>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-title">Crispy Calamari</div>
+                        <div class="item-price">£11.95</div>
+                    </div>
+                    <div class="item-desc">Lightly battered squid rings served with lemon aioli and fresh parsley</div>
+                    <span class="item-badge">Gluten Free</span>
+
+                </div>
+
+                 <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-title">Butter Croissant</div>
+                        <div class="item-price">£10.50</div>
+                    </div>
+                    <div class="item-desc">Flaky, delicate, buttery croissant served warm with premium French butter.</div>
+                    <span class="item-badge">Freshly Baked</span>
+
+                </div>
+            </div>
+
+            <!-- Main Courses Section -->
+            <div class="menu-category">
+                <div class="category-header">
+                    <h2><i class="fas fa-drumstick-bite"></i> Main Courses</h2>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-title">Beef Wellington</div>
+                        <div class="item-price">£24.95</div>
+                    </div>
+                    <div class="item-desc">Prime beef fillet wrapped in puff pastry with mushroom duxelles</div>
+                    <span class="item-badge">Chef's Special</span>
+                </div>
+                  
+                 <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-title">Creamy Garlic Parmesan Pasta</div>
+                        <div class="item-price">£25.95</div>
+                    </div>
+                    <div class="item-desc">Pasta in freshly grated Parmesan, double cream, Prawns, finished with parsley</div>
+                </div>
+                                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-title">Herb Crusted Salmon</div>
+                        <div class="item-price">£19.95</div>
+                    </div>
+                    <div class="item-desc">Atlantic salmon with a crispy herb crust, served with seasonal vegetables</div>
+                    <span class="item-badge">Gluten Free</span>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-title">Chicken Supreme</div>
+                        <div class="item-price">£18.50</div>
+                    </div>
+                    <div class="item-desc">Free-range chicken breast with wild mushroom sauce and truffle mash</div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-title">Lamb Shank</div>
+                        <div class="item-price">£22.95</div>
+                    </div>
+                    <div class="item-desc">Slow-cooked lamb shank in red wine sauce with root vegetable mash</div>
+                </div>
+            </div>
+           
+            <!-- Desserts Section -->
+            <div class="menu-category">
+                <div class="category-header">
+                    <h2><i class="fas fa-ice-cream"></i> Desserts</h2>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-title">Chocolate Fondant</div>
+                        <div class="item-price">£8.95</div>
+                    </div>
+                    <div class="item-desc">Warm chocolate cake with a molten center, served with vanilla ice cream</div>
+                    <span class="item-badge">Popular</span>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-title">Berry Cheesecake</div>
+                        <div class="item-price">£7.50</div>
+                    </div>
+                    <div class="item-desc">Creamy cheesecake on a biscuit base, topped with fresh seasonal berries</div>
+                    <span class="item-badge">Vegetarian</span>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-title">Crème Brûlée</div>
+                        <div class="item-price">£7.25</div>
+                    </div>
+                    <div class="item-desc">Classic vanilla custard with caramelized sugar crust</div>
+                    <span class="item-badge">Gluten Free</span>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-title">Apple Tarte Tatin</div>
+                        <div class="item-price">£8.25</div>
+                    </div>
+                    <div class="item-desc">Upside-down caramelized apple tart with vanilla ice cream</div>
+                </div>
+            </div>
+
+            <!-- Beverages Section -->
+            <div class="menu-category">
+                <div class="category-header">
+                    <h2><i class="fas fa-glass-cheers"></i> Beverages</h2>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-title">Signature Cocktails</div>
+                        <div class="item-price">£9.95</div>
+                    </div>
+                    <div class="item-desc">Handcrafted cocktails made with premium spirits and fresh ingredients</div>
+                    <span class="item-badge">Must Try</span>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-title">Wine Selection</div>
+                        <div class="item-price">From £6.50</div>
+                    </div>
+                    <div class="item-desc">Curated selection of red, white, and rosé wines from around the world</div>
+                    <span class="item-badge">Extensive List</span>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-title">Craft Beers</div>
+                        <div class="item-price">£5.95</div>
+                    </div>
+                    <div class="item-desc">Selection of local and international craft beers</div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-title">Specialty Coffee</div>
+                        <div class="item-price">£3.50</div>
+                    </div>
+                    <div class="item-desc">Espresso, cappuccino, latte, and other coffee specialties</div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-title">Fresh Juices</div>
+                        <div class="item-price">£4.25</div>
+                    </div>
+                    <div class="item-desc">Freshly squeezed orange, apple, carrot, and seasonal blends</div>
+                    <span class="item-badge">Healthy Option</span>
+                </div>
+            </div>
+
+            <!-- Sides Section -->
+            <div class="menu-category">
+                <div class="category-header">
+                    <h2><i class="fas fa-leaf"></i> Side Dishes</h2>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-title">Truffle Mash Potato</div>
+                        <div class="item-price">£4.95</div>
+                    </div>
+                    <div class="item-desc">Creamy mashed potato with black truffle infusion</div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-title">Seasonal Vegetables</div>
+                        <div class="item-price">£4.50</div>
+                    </div>
+                    <div class="item-desc">Fresh seasonal vegetables lightly steamed with herb butter</div>
+                    <span class="item-badge">Vegetarian</span>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-title">Garden Salad</div>
+                        <div class="item-price">£4.25</div>
+                    </div>
+                    <div class="item-desc">Mixed greens with cherry tomatoes, cucumber, and balsamic dressing</div>
+                    <span class="item-badge">Vegetarian</span>
+                    <span class="item-badge">Gluten Free</span>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-title">Garlic Bread</div>
+                        <div class="item-price">£3.95</div>
+                    </div>
+                    <div class="item-desc">Artisan bread with garlic butter and parsley</div>
+                </div>
+            </div>
+
+            <!-- Packages Section -->
+            <div class="menu-category">
+                <div class="category-header">
+                    <h2><i class="fas fa-gift"></i> Catering Packages</h2>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-title">Silver Package</div>
+                        <div class="item-price">£35 per person</div>
+                    </div>
+                    <div class="item-desc">Includes 2 starters, 3 main courses, 2 desserts, and soft drinks</div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-title">Gold Package</div>
+                        <div class="item-price">£50 per person</div>
+                    </div>
+                    <div class="item-desc">Includes 3 starters, 4 main courses, 3 desserts, and wine selection</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-title">Platinum Package</div>
+                        <div class="item-price">£75 per person</div>
+                    </div>
+                    <div class="item-desc">Includes 4 starters, 5 main courses, 4 desserts, signature cocktails, soft drinks plus Live cooking stations</div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <div class="item-title">Diamond Package</div>
+                        <div class="item-price">£100 per person</div>
+                    </div>
+                    <div class="item-desc">Personalized menu planning with executive chef that includes 5 starters, 6 main courses, 5 desserts, premium open bar with top-shelf spirits, wine selection plus Butler service and dedicated staff </div>
+                </div>
+            </div>
+
+        </div>
+            
+        <!-- PDF Menu Section -->
+            <section class="pdf-section">
+                <div class="container">
+                    <h2>Download Our Full Menu</h2>
+                    <div class="pdf-container">
+                        <div class="pdf-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <p>For a complete overview of all our offerings, including seasonal specials and detailed descriptions, download our full menu brochure 2 go.</p>
+                        <a href="/path/to/your/menu.pdf" class="btn action-buttons" download>
+                            <i class="fas fa-download"></i> Download PDF Menu
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        <!-- Menu Footer -->
+            <section class="menu-footer">
+            <h2>Ready to Plan Your Event?</h2>
+            <p>Contact us today to discuss your catering needs and receive a personalized quote.</p>
+                <div class="action-buttons">
+                    <a href="contact.html" class="btn">Contact Us</a>
+                    <a href="tel:" class="btn btn-outline">Call Now</a>
+                    <a href="menu.html" class="btn">Return</a>
+                </div>
+            </section>
+
+    </body>
+</html>

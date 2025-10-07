@@ -197,9 +197,8 @@
         .hero-content {
             max-width: 800px;
             padding: 1.5rem;
-            background: rgba(0, 0, 0, 0.1);
             border-radius: 10px;
-            animation: fadeInUp 1s ease;
+            animation: fadeInUp 2s ease-in-out;
         }
 
         .hero-content h1 {

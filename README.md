@@ -8,7 +8,7 @@
 gourmet-delights/
 ├── index.html             # Homepage with hero section and services
 ├── menu.html              # Interactive menu with filtering
-  │   └── menupage.css     # Comlete menu and Services
+  │   └── menupage.html     # Comlete menu and Services
 ├── about.html             # Company story and team information
 ├── gallery.html           # Event portfolio and food photography
 ├── contact.html           # Contact form and booking information
